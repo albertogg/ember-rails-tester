@@ -15,7 +15,7 @@ module Api
         user = User.new_user_params(params[:user])
 
         if user.save
-          redirect_to @user
+          respond_with user
         else
           render :new
         end
