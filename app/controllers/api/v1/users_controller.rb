@@ -11,6 +11,15 @@ module Api
         respond_with User.find(params[:id])
       end
 
+      def create
+        user = User.new_user_params(params[:user])
+
+        if user.save
+          redirect_to @user
+        else
+          render :new
+        end
+      end
     end
   end
 end
