@@ -4,5 +4,6 @@ EmberTester.Router.reopen(
 
 EmberTester.Router.map ->
   @resource "users", ->
+    @resource "new"
     @resource "user",
       path: ":user_id"
